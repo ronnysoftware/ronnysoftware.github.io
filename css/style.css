@@ -1,0 +1,203 @@
+/* main */
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Acrom";
+}
+
+html {
+    position: relative; 
+    min-height: 100%;
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("/img/wall.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+p {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* nav */
+/* nav inner */
+div.nav {
+    margin: 20px auto;
+}
+
+/* logo */
+h1.logo {
+    font-family: "achfexp";
+    font-weight: normal;
+    font-size: 36px;
+}
+
+/* menu pages */
+ul.pages a {
+    text-decoration: none;
+}
+
+/* socials */
+div.contacts-block {
+	display: flex;
+    width: 40px;
+    justify-content: space-between;
+}
+
+
+div.contacts-block a.contact {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+div.contacts-block-footer {
+    display: none;
+}
+
+/* inner */
+div.inner-content {
+    display: block;
+    min-width: 600px;
+    max-width: 1200px;
+    width: calc(100% - 100px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+/* news */
+div.news-element {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    background: #ffffff29;
+}
+
+div.news-element p.title {
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+}
+
+/* repos */
+div.repos-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    background: #ffffff29;
+}
+
+div.repos-element p.title {
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+}
+
+div.repos-element a.download {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    background: #ffffff29;
+    border-radius: 4px;
+}
+
+@media screen and (min-width: 600px) {
+
+    div.nav {
+        display: flex;
+        min-width: 600px;
+        max-width: 1200px;
+        width: calc(100% - 100px);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    ul.pages {
+        display: flex;
+        list-style: none;
+    }
+    
+    ul.pages li {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    div.nav {
+        display: block;
+        text-align: center;
+    }
+
+    h1.logo {
+        display: block;
+        font-size: 36px
+    }
+    ul.pages {
+        display: block;
+        list-style: none;
+        max-width: calc(130px);
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    div.inner-content {
+        min-width: 0px;
+        max-width: 600px;
+    }
+
+    div.repos-element {
+        display: block;
+    }
+    div.repos-element a.download {
+        margin-top: 5px;
+    }
+
+    div.contacts-block {
+        display: none;
+    }
+    div.contacts-block-footer {
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        left: 50px;
+        right: 0;
+
+        min-width: 0px;
+        max-width: 600px;
+        width: calc(100% - 100px);
+        height: 40px;
+        background: #ffffff29;
+        border-radius: 6px;
+
+        
+        justify-content: center;
+        align-items: center;
+    }
+    div.contacts-block-footer a.contact {
+        margin: 0px 2px;
+    }
+}

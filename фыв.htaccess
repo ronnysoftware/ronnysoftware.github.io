@@ -1,0 +1,19 @@
+# htaccess for ronnysoftware
+# disable cache
+<filesMatch ".(html|htm|js|css|jpg|png)$">
+	FileETag None
+	<ifModule mod_headers.c>
+		Header unset ETag
+		Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+		Header set Pragma "no-cache"
+		Header set Expires "Wed, 08 Jan 1975 05:00:00 GMT"
+	</ifModule>
+</filesMatch>
+
+# remove .html from urls
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+ErrorDocument 404 /404.html
+ErrorDocument 500 /404.html
